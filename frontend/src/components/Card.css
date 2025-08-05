@@ -1,0 +1,127 @@
+/* ==========================================================================
+   1. CARD CONTAINER
+   ========================================================================== */
+.card {
+  /* Box Model & Layout */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-left: 2.5rem;
+  
+  /* Appearance */
+  background-color: var(--color-card-background);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  
+  /* Interactivity */
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card.selected {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   2. RISK STRIPE
+   ========================================================================== */
+.card-risk-stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 8px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+/* ==========================================================================
+   3. CARD HEADER
+   ========================================================================== */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.risk-level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   4. CARD BODY
+   ========================================================================== */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text);
+}
+
+.card-item .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.item-label {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.item-value {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   5. CARD FOOTER
+   ========================================================================== */
+.card-footer {
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: right;
+}
+
+.timestamp {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
